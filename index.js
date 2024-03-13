@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const angle = (value / 100) * 360;
         progress.style.transform = `rotate(${angle}deg)`;
         progressBar.style.transform = `scaleY(${value / 100})`;
+        if (!animateToggle.checked) {
+            progress.classList.remove("animated");
+        }
     }
 
     function toggleAnimation() {
